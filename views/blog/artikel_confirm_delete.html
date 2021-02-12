@@ -1,0 +1,6 @@
+{% extends '../base.html' %} {% load static %} {% block content %}
+<form style="display: inline;" method="post">
+    {% csrf_token %}
+    <button type="submit">Ya</button>
+</form>
+<a href="{% url 'blog:detail' object.slug %}"><button>Batal</button></a> {% endblock %}

@@ -1,0 +1,8 @@
+{% extends '../base.html' %} {% load static %} {% block content %}
+<p>{{object.isi}}</p>
+<img src="/static/img/{{object.foto}}" alt="asdfd" height="300">
+<p><small><i>ditulis oleh: <strong>{{object.penulis}}</strong>, pada: <strong>{{object.published}}</strong></i></small></p>
+<br><br>
+<a href="{% url 'blog:edit' object.slug %}"><button style="background-color: rgb(230, 230, 49); border-radius: 5px;">Perbarui</button></a>
+<a href="{% url 'blog:delete' object.slug %}"><button style="background-color: rgb(255, 105, 105); border-radius: 5px;">Hapus</button></a>
+<a href="{% url 'blog:index' %}"><button style="background-color: rgb(122, 255, 133); border-radius: 5px;">Kembali</button></a> {% endblock %}

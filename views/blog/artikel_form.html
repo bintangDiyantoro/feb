@@ -1,0 +1,11 @@
+{% extends '../base.html' %} {% load static %} {% block content %}
+
+<form method="post" enctype="multipart/form-data" style="display: inline;">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <br>
+    <button type="submit">Simpan</button>
+</form>
+<a href="{% url 'blog:index' %}"><button>Kembali</button></a> {% endblock %}
